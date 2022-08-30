@@ -34,8 +34,8 @@ export const contextProvider = ({children}: ContextProviderType) => {
     const [state, dispatch] = useReducer(mainReducer, initialState) // NUNCA esquecer useReducer é o hook e não userReducer.
 
     return(
-        <Context.Provider value={{state, dispatch}}>
-            {children}
+        <Context.Provider value={{state, dispatch}}> 
+            {children} 
         </Context.Provider>
-    )
+    ) // repassando os valores para dentro do children
 }
