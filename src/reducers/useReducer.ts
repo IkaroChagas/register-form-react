@@ -14,7 +14,7 @@ export const userReducer = (state: userType[], action: reducerActionType) => {
     switch (action.type) {
         case 'ADD_NEW':
             if (action.payload.name && action.payload.age && action.payload.email) {
-                const cloneState = [...state]
+                const cloneState = [...state] // criei a variável para receber o clone de state
                 cloneState.push({
                     id: uuid(),
                     name: action.payload.name,
