@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import {userType, userInitial, userReducer} from '../reducers/useReducer'
 import {reducerActionType} from '../types/reducerActionType'
 
@@ -37,5 +37,6 @@ export const contextProvider = ({children}: ContextProviderType) => {
         <Context.Provider value={{state, dispatch}}> 
             {children} 
         </Context.Provider>
+        
     ) // repassando os valores para dentro do children
 }
