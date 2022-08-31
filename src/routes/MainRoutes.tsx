@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import { Home } from '../pages/Home/Home'
+import { Home } from '../pages/Home/'
 
 
 export const MainRoutes = () => {
