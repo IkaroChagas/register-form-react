@@ -30,7 +30,7 @@ const mainReducer = (state: initialStateType, action: reducerActionType) => ({ /
     user: userReducer(state.user, action)
 });
 
-export const contextProvider = ({children}: ContextProviderType) => {
+export const ContextProvider = ({children}: ContextProviderType) => {
     const [state, dispatch] = useReducer(mainReducer, initialState); // NUNCA esquecer useReducer é o hook e não userReducer.
 
     return(
