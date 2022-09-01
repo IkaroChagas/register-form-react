@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: antiquewhite;
+    background-color: #8d5102;
 `;
 
 export const header = styled.div`
-    
+`
+export const h2 = styled.h2`
+    margin-bottom: 20px;
 `
 
 export const form = styled.form`
@@ -14,17 +16,11 @@ export const form = styled.form`
     align-items: center;
 `;
 
-export const input = styled.input`
-    display: flex;
-    flex-direction: column;
+export const Input = styled.input`
+
 `;
 
-export const button = styled.button`
-    display: flex;
-    margin: auto;
-    height: 45px;
-    width: 120px;
-    font-size: 20px;
+export const Button = styled.button`
 `;
 
 export const Line = styled.hr`

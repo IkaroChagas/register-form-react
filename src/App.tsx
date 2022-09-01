@@ -12,11 +12,9 @@ const { state, dispatch } = useContext(Context)
     <C.Container>
 
     <C.header>Dev-Sign</C.header>
-    <C.Line />
 
     <MainRoutes />
-    
-    <C.Line />
+
 
     <C.Footer>
       <C.Link href='https://github.com/IkaroChagas'></C.Link>
