@@ -1,26 +1,27 @@
-import { useState, useContext, ChangeEvent } from "react"
+import React, { useState, useContext } from "react"
 import { Context } from '../../contexts/context'
 import * as C from './styles'
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
+
 
 export const Home = () => {
     const { dispatch } = useContext(Context);
 
     const [nameInput, setNameInput] = useState<string>('')
     const [ageInput, setAgeInput] = useState<number>(0)
-    const [emailInput, setEmailInput] = useState<string>()
+    const [emailInput, setEmailInput] = useState<string>('')
 
 
-    const handleNameInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNameInput(e.target.value)
     }
 
-    const handleAgeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleAgeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setAgeInput(parseInt(e.target.value))
     }
 
-    const handleEmailInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleEmailInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmailInput(e.target.value)
     }
 
@@ -45,6 +46,7 @@ export const Home = () => {
         } else {
             alert('Preencha os campos!')
         }
+
     }
 
     return (

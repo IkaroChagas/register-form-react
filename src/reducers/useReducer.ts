@@ -1,16 +1,16 @@
 import { uuid } from 'uuidv4';
 import { reducerActionType } from '../types/reducerActionType';
 
-export type userType = {
+export type UserType = {
     id: string;
     name: string;
     age: number;
     email: string;
 }
 
-export const userInitial: userType[] = [] // exportando o usertype como array vazio
+export const userInitial: UserType[] = [] // exportando o usertype como array vazio
 
-export const userReducer = (state: userType[], action: reducerActionType) => {
+export const userReducer = (state: UserType[], action: reducerActionType) => {
     switch (action.type) {
         case 'ADD_NEW':
             if (action.payload.name && action.payload.age && action.payload.email) {
