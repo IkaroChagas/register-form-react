@@ -7,6 +7,11 @@ import { useContext } from 'react';
 function App() {
   const { state, dispatch } = useContext(Context)
 
+  const handleSendInfo = () => {
+    if (state.user !== )
+
+  }
+
   return (
 
     <C.Container>
