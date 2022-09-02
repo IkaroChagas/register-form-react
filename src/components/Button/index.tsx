@@ -6,6 +6,7 @@ import * as C from './styles'
 type Props = {
     content?: string;
     onClick?: () => void;
+    bgColorButton?: string;
 }
 
 export const Button = ({ content, onClick }: Props) => {
