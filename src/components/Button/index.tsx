@@ -7,9 +7,10 @@ type Props = {
     content?: string;
     onClick?: () => void;
     bgColorButton?: string;
+    icon?: string;
 }
 
-export const Button = ({ content, onClick }: Props) => {
+export const Button = ({ content, onClick, bgColorButton, icon }: Props) => {
     return (
         <C.Button />
     );

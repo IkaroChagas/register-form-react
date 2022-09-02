@@ -7,7 +7,7 @@ type Props = {
     onChange?: (e: any) => void
 }
 
-export const Input = ({ type, placeholder, value, onChange }: Props) => {
+export const Input = ({ }: Props) => {
     return (
         <C.Input />
     );

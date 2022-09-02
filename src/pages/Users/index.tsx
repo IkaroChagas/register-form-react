@@ -4,6 +4,7 @@ import { Input } from "../../components/Input";
 import { Context } from "../../contexts/context";
 import * as C from './styles'
 import { UserType } from "../../reducers/user";
+import CancelImg from '../../Images/cancel-icon.svg'
 
 // Users que irá para as rotas
 export const Users = () => {
@@ -123,7 +124,7 @@ export const Users = () => {
                     </C.Edit>
                     <C.EditUser>
                         <Button content="Salvar" bgColorButton="#c8db5d" onClick={handleSaveUser} />
-                        <Button content="Cancelar" bgColorButton="#7a3137" onClick={handleCancel} />
+                        <Button content="Cancelar" bgColorButton="#7a3137" icon={CancelImg} onClick={handleCancel} />
                     </C.EditUser>
                 </>
             }

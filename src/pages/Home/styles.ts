@@ -1,35 +1,30 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #8d5102;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 `;
 
-export const header = styled.div`
-`
-export const h2 = styled.h2`
-    margin-bottom: 20px;
+export const H2 = styled.h2`
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
 `
 
-export const form = styled.form`
+export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 export const Input = styled.input`
-
 `;
 
 export const Button = styled.button`
 `;
 
-export const Line = styled.hr`
-    margin: 20px 0;
-`;
 
-export const Footer = styled.footer`
-    text-align: center;
-    margin-bottom: 10px;
-`;
-
-export const Link = styled.a``;

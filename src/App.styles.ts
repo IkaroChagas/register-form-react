@@ -64,7 +64,7 @@ export const Menu = styled.div`
     }
 `;
 
-export const Line = styled.hr`
+export const Line = styled.div`
     margin: 20px 0;
 `;
 

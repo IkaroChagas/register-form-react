@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const Input = styled.div`
+export const Input = styled.input`
     width: 100%;
+    height: 40px;
     max-width: 600px;
     border-radius: 10px;
     font-size: 16px;
