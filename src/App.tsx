@@ -4,22 +4,31 @@ import { Context } from './contexts/context'
 import { useContext } from 'react';
 
 
+
 function App() {
   const { state, dispatch } = useContext(Context)
 
-  const handleSendInfo = () => {
-    if (state.user !== )
 
-  }
+  if (state.user.values())
+    dispatch({
+      type: 'ADD_NEW',
+      payload: {
+        id: '',
+        name: '',
+        age: 0,
+        email: ''
+      }
+    })
+
 
   return (
 
     <C.Container>
 
       <C.header>Dev-Sign</C.header>
-
-      <MainRoutes />
-
+      <>
+        <MainRoutes />
+      </>
 
       <C.Footer>
         <C.Link href='https://github.com/IkaroChagas'></C.Link>
@@ -27,6 +36,7 @@ function App() {
 
     </C.Container>
   );
+
 }
 
 export default App;
