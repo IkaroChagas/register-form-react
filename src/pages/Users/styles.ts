@@ -6,7 +6,10 @@ type themeOptionsType = { themeOptions: ThemeType }
 export const Container = styled.div``;
 
 export const h2 = styled.h2`
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 `
 
 export const UsersTable = styled.table`
@@ -26,7 +29,11 @@ export const UserTheme = styled.div<themeOptionsType>`
     }
 `;
 
-export const BodyTheme = styled.div``;
+export const TR = styled.tr`
+    display: flex;
+`;
+
+export const BodyTheme = styled.tbody``;
 
 export const theme = styled.th`
     width: 100%;
@@ -39,8 +46,12 @@ export const theme2 = styled.td`
 `;
 
 export const ThemeIndex = styled.td`
+    display: flex;
     text-align: center;
     padding: 5px 0;
+`;
+
+export const ContentTable = styled.thead`
 `;
 
 export const BodyButtons = styled.div``

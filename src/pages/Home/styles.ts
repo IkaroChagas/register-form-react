@@ -21,10 +21,4 @@ export const Form = styled.form`
     align-items: center;
 `;
 
-export const Input = styled.input`
-`;
-
-export const Button = styled.button`
-`;
-
 

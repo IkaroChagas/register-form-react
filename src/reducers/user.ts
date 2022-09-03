@@ -19,7 +19,7 @@ export const userReducer = (state: UserType[], action: reducerActionType) => {
                     id: uuid(),
                     name: action.payload.name,
                     age: action.payload.age,
-                    email: action.payload.contact
+                    email: action.payload.email
                 })
                 return cloneState
             }

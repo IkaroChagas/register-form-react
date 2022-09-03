@@ -1,14 +1,14 @@
 import * as C from './styles'
 
 type Props = {
-    type?: string
-    placeholder?: string | number
-    value?: string | number
+    type: string
+    placeholder: string
+    value: string | number
     onChange?: (e: any) => void
 }
 
-export const Input = ({ }: Props) => {
+export const Input = ({ type, placeholder, value, onChange }: Props) => {
     return (
-        <C.Input />
+        <C.Input type={type} placeholder={placeholder} value={value} onChange={onChange} />
     );
 }

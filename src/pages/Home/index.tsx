@@ -3,7 +3,7 @@ import { Context } from '../../contexts/context'
 import * as C from './styles'
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
-import SendImg from '../../Images/accept-icon.svg'
+import SendImg from '../../images/accept.svg'
 
 export const Home = () => {
     const { dispatch } = useContext(Context);
@@ -42,7 +42,7 @@ export const Home = () => {
 
             setTimeout(() => {
                 alert('Usuário foi cadastrado com sucesso, verifique a lista de usuários')
-            }, 200);
+            }, 150);
         } else {
             alert('Preencha os campos!')
         }

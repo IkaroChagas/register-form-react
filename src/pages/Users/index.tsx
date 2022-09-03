@@ -4,7 +4,12 @@ import { Input } from "../../components/Input";
 import { Context } from "../../contexts/context";
 import * as C from './styles'
 import { UserType } from "../../reducers/user";
-import CancelImg from '../../Images/cancel-icon.svg'
+import CancelImg from '../../images/cancel.svg'
+import SaveImg from '../../images/save.svg'
+import EditImg from '../../images/edit.svg'
+import DeleteImg from '../../images/delete.svg'
+
+
 
 // Users que irá para as rotas
 export const Users = () => {
@@ -67,66 +72,70 @@ export const Users = () => {
             <C.h2>Usuários cadastrados</C.h2>
             {state.user[0] &&
                 <C.UsersTable>
-                    <C.UserTheme themeOptions={state.theme}>
-                        <C.theme>Nome</C.theme>
-                    </C.UserTheme>
+                    <C.ContentTable>
+                        <C.TR>
+                            <C.UserTheme themeOptions={state.theme}>
+                                <C.theme>Nome</C.theme>
+                            </C.UserTheme>
 
-                    <C.UserTheme themeOptions={state.theme}>
-                        <C.theme>Idade</C.theme>
-                    </C.UserTheme>
+                            <C.UserTheme themeOptions={state.theme}>
+                                <C.theme>Idade</C.theme>
+                            </C.UserTheme>
 
-                    <C.UserTheme themeOptions={state.theme}>
-                        <C.theme>E-mail</C.theme>
-                    </C.UserTheme>
+                            <C.UserTheme themeOptions={state.theme}>
+                                <C.theme>E-mail</C.theme>
+                            </C.UserTheme>
 
-                    <C.UserTheme themeOptions={state.theme}>
-                        <C.theme>Opções</C.theme>
-                    </C.UserTheme>
-
+                            <C.UserTheme themeOptions={state.theme}>
+                                <C.theme>Opções</C.theme>
+                            </C.UserTheme>
+                        </C.TR>
+                    </C.ContentTable>
 
                     <C.BodyTheme>
                         {state.user.map((item, index) => (
-                            <>
-                                <C.ThemeIndex key={index}>
-                                    <C.UserTheme themeOptions={state.theme}>
-                                        <C.theme2>{item.name}</C.theme2>
-                                    </C.UserTheme>
+                            <C.ThemeIndex key={index}>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme2>{item.name}</C.theme2>
+                                </C.UserTheme>
 
-                                    <C.UserTheme themeOptions={state.theme}>
-                                        <C.theme2>{item.age}</C.theme2>
-                                    </C.UserTheme>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme2>{item.age}</C.theme2>
+                                </C.UserTheme>
 
-                                    <C.UserTheme themeOptions={state.theme}>
-                                        <C.theme2>{item.email}</C.theme2>
-                                    </C.UserTheme>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme2>{item.email}</C.theme2>
+                                </C.UserTheme>
 
-                                </C.ThemeIndex>
+                                <C.UserTheme themeOptions={state.theme}>
 
-                                <C.BodyButtons>
-                                    <Button bgColorButton="#801515" onClick={() => handleDeleteUser(item.id)} />
-                                    <Button bgColorButton="#0b1d70" onClick={() => handleEditUser(item)} />
-                                </C.BodyButtons>
-                            </>
+                                    <C.BodyButtons>
+                                        <Button bgColorButton="#801515" icon={DeleteImg} onClick={() => handleDeleteUser(item.id)} />
+                                        <Button bgColorButton="#0b1d70" icon={EditImg} onClick={() => handleEditUser(item)} />
+                                    </C.BodyButtons>
+                                </C.UserTheme>
+                            </C.ThemeIndex>
                         ))}
                     </C.BodyTheme>
                 </C.UsersTable>
             }
 
             {edit &&
-                <>
-                    <C.Edit themeOptions={state.theme}>
 
-                        <C.EditTitle>Editar Cadastro</C.EditTitle>
+                <C.Edit themeOptions={state.theme}>
 
-                        <Input type="text" placeholder='Seu nome' value={nameInput} onChange={handleNameInput} />
-                        <Input type="number" placeholder='Sua idade' value={ageInput} onChange={handleAgeInput} />
-                        <Input type="text" placeholder='Seu e-mail' value={emailInput} onChange={handleEmailInput} />
-                    </C.Edit>
+                    <C.EditTitle>Editar Cadastro</C.EditTitle>
+
+                    <Input type="text" placeholder='Seu nome' value={nameInput} onChange={handleNameInput} />
+                    <Input type="number" placeholder='Sua idade' value={ageInput} onChange={handleAgeInput} />
+                    <Input type="text" placeholder='Seu e-mail' value={emailInput} onChange={handleEmailInput} />
+
                     <C.EditUser>
-                        <Button content="Salvar" bgColorButton="#c8db5d" onClick={handleSaveUser} />
+                        <Button content="Salvar" bgColorButton="#c8db5d" icon={SaveImg} onClick={handleSaveUser} />
                         <Button content="Cancelar" bgColorButton="#7a3137" icon={CancelImg} onClick={handleCancel} />
                     </C.EditUser>
-                </>
+
+                </C.Edit>
             }
             {!state.user[0] &&
                 <C.Empty>

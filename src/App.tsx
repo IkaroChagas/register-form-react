@@ -16,8 +16,9 @@ function App() {
         payload: {
           status: 'light',
           bgColor: '#ddd',
-          boxShaodw: '0 0 10px #333',
-          bgColorTransparent: 'rgba(255,255,255,0.65)'
+          color: '#000',
+          boxShadow: '0 0 10px #333',
+          bgColorTransparent: 'rgba(255,255,255,0.40)'
         }
       })
     } else {
@@ -58,7 +59,7 @@ function App() {
       </C.Line>
 
       <C.Footer>
-        <C.Link href='https://github.com/IkaroChagas' target="_blank">Íkaro Chagas</C.Link>
+        <C.Link href='https://github.com/IkaroChagas' target="_blank">Desenvolvido por Íkaro Chagas</C.Link>
       </C.Footer>
     </C.Body >
   );

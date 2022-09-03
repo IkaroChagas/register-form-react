@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { ThemeType } from "./reducers/theme";
 
-type ThemeOptionsType = { themeOptions: ThemeType }
+type ThemeOptionsType = {
+    themeOptions: ThemeType
+}
 
 export const Body = styled.div <ThemeOptionsType>`
     background-color: ${(props: { themeOptions: { bgColor: any; }; }) => props.themeOptions.bgColor};
@@ -26,12 +28,19 @@ export const Logo = styled.div`
 `;
 
 export const LogoText = styled.div`
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: sans-serif;
 `;
 
 export const Theme = styled.div`
     display: flex;
     align-items: center;
+    margin: 10px;
 `;
 
 export const ThemeContainer = styled.div`
@@ -40,9 +49,10 @@ export const ThemeContainer = styled.div`
     height: 15px;
     border-radius: 20px;
     display: flex;
+    margin: -90px;
     align-items: center;
     position: relative;
-    cursor: pointer;      
+    cursor: pointer; 
 `;
 
 export const ThemeCircle = styled.div<ThemeOptionsType>`
@@ -59,8 +69,8 @@ export const ThemeCircle = styled.div<ThemeOptionsType>`
 
 export const Menu = styled.div`
     div {
-        margin: 0;  
-        margin-right: 10px;
+        margin: 20px;  
+        margin-right: 15px;
     }
 `;
 
