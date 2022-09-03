@@ -83,4 +83,5 @@ export const Footer = styled.footer`
     margin-bottom: 10px;
 `;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+`;

@@ -4,7 +4,7 @@ type Props = {
     type: string
     placeholder: string
     value: string | number
-    onChange?: (e: any) => void
+    onChange: (e: any) => void
 }
 
 export const Input = ({ type, placeholder, value, onChange }: Props) => {

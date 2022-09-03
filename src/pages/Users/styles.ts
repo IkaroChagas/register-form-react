@@ -45,7 +45,7 @@ export const theme2 = styled.td`
      padding: 5px 0;
 `;
 
-export const ThemeIndex = styled.td`
+export const ThemeIndex = styled.tr`
     display: flex;
     text-align: center;
     padding: 5px 0;
