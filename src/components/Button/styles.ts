@@ -11,7 +11,7 @@ export const Button = styled.div<ButtonType>`
     align-items: center;
     border-radius: 10px;
     background-color: ${props => props.bgColor};
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
     margin:  0 4px;
     margin-top: 20px;
@@ -19,10 +19,6 @@ export const Button = styled.div<ButtonType>`
     height: 50px;
     padding: 10px 5px;
     transition: all ease .5s;
-
-    &:hover {
-        box-shadow: ${props => props.themeOptions.boxShadow};
-    } 
 `;
 
 export const ButtonIcon = styled.img`

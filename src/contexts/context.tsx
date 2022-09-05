@@ -6,7 +6,7 @@ import { reducerActionType } from '../types/reducerActionType'
 
 type initialStateType = { // o contexto iniciará com o userType
     user: UserType[];
-    theme: ThemeType
+    theme: ThemeType;
 }
 
 type ContextType = {

@@ -22,6 +22,7 @@ export const userReducer = (state: UserType[], action: reducerActionType) => {
                     email: action.payload.email
                 })
                 return cloneState
+
             }
             break
         case 'EDIT_USER':
@@ -49,3 +50,4 @@ export const userReducer = (state: UserType[], action: reducerActionType) => {
 
     return state
 }
+

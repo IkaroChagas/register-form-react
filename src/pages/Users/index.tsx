@@ -10,7 +10,6 @@ import EditImg from '../../images/edit.svg'
 import DeleteImg from '../../images/delete.svg'
 
 
-
 // Users que irá para as rotas
 export const Users = () => {
     const { state, dispatch } = useContext(Context)
@@ -73,23 +72,25 @@ export const Users = () => {
             {state.user[0] &&
                 <C.UsersTable>
                     <C.ContentTable>
-                        <C.TR>
-                            <C.UserTheme themeOptions={state.theme}>
-                                <C.theme>Nome</C.theme>
-                            </C.UserTheme>
+                        <C.UserHead>
+                            <C.TR>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme>Nome</C.theme>
+                                </C.UserTheme>
 
-                            <C.UserTheme themeOptions={state.theme}>
-                                <C.theme>Idade</C.theme>
-                            </C.UserTheme>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme>Idade</C.theme>
+                                </C.UserTheme>
 
-                            <C.UserTheme themeOptions={state.theme}>
-                                <C.theme>E-mail</C.theme>
-                            </C.UserTheme>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme>E-mail</C.theme>
+                                </C.UserTheme>
 
-                            <C.UserTheme themeOptions={state.theme}>
-                                <C.theme>Opções</C.theme>
-                            </C.UserTheme>
-                        </C.TR>
+                                <C.UserTheme themeOptions={state.theme}>
+                                    <C.theme>Opções</C.theme>
+                                </C.UserTheme>
+                            </C.TR>
+                        </C.UserHead>
                     </C.ContentTable>
 
                     <C.BodyTheme>
@@ -131,7 +132,7 @@ export const Users = () => {
                     <Input type="text" placeholder='Seu e-mail' value={emailInput} onChange={handleEmailInput} />
 
                     <C.EditUser>
-                        <Button content="Salvar" bgColorButton="#c8db5d" icon={SaveImg} onClick={handleSaveUser} />
+                        <Button content="Salvar" bgColorButton="#8fa514" icon={SaveImg} onClick={handleSaveUser} />
                         <Button content="Cancelar" bgColorButton="#7a3137" icon={CancelImg} onClick={handleCancel} />
                     </C.EditUser>
 

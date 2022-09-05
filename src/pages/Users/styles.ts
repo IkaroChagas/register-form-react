@@ -29,6 +29,9 @@ export const UserTheme = styled.div<themeOptionsType>`
     }
 `;
 
+export const UserHead = styled.thead`
+`
+
 export const TR = styled.tr`
     display: flex;
 `;
@@ -54,7 +57,10 @@ export const ThemeIndex = styled.tr`
 export const ContentTable = styled.thead`
 `;
 
-export const BodyButtons = styled.div``
+export const BodyButtons = styled.td`
+    text-align: center;
+    padding: 5px 0;
+`;
 
 export const Edit = styled.div<themeOptionsType>`
     display: flex;
@@ -69,7 +75,6 @@ export const Edit = styled.div<themeOptionsType>`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${props => props.themeOptions.bgColorTransparent};
     color: #fff;
 `;
 
@@ -89,5 +94,5 @@ export const Empty = styled.div`
 `;
 
 export const EmptyText = styled.span`
-    font-size: 22px;
+    font-size: 20px;
 `;
