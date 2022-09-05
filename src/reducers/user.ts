@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 import { reducerActionType } from '../types/reducerActionType';
 
 export type UserType = {
@@ -16,7 +16,7 @@ export const userReducer = (state: UserType[], action: reducerActionType) => {
             if (action.payload.name && action.payload.age && action.payload.email) {
                 const cloneState = [...state] // criei a variável para receber o clone de state
                 cloneState.push({
-                    id: uuid(),
+                    id: uuidv4(),
                     name: action.payload.name,
                     age: action.payload.age,
                     email: action.payload.email

@@ -13,6 +13,14 @@ export const Body = styled.div <ThemeOptionsType>`
     a {
         color: ${(props: { themeOptions: { color: any; }; }) => props.themeOptions.color};
     }
+    
+    @media(max-width: 414px) {
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 `;
 
 export const Header = styled.header`
@@ -75,13 +83,15 @@ export const Menu = styled.div`
 `;
 
 export const Line = styled.div`
-    margin: 20px 0;
+    margin: 40px 0;
 `;
 
 export const Footer = styled.footer`
     text-align: center;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 40px;
 `;
 
 export const Link = styled.a`
+
 `;

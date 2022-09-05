@@ -8,9 +8,9 @@ import SendImg from '../../images/accept.svg'
 export const Home = () => {
     const { dispatch } = useContext(Context);
 
-    const [nameInput, setNameInput] = useState<string>('')
-    const [ageInput, setAgeInput] = useState<number>(0)
-    const [emailInput, setEmailInput] = useState<string>('')
+    const [nameInput, setNameInput] = useState<string>('');
+    const [ageInput, setAgeInput] = useState<number>(0);
+    const [emailInput, setEmailInput] = useState<string>('');
 
 
     const handleNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +28,7 @@ export const Home = () => {
     const handleAddNewUser = () => {
         if (nameInput && ageInput && emailInput) {
             dispatch({
-                type: 'ADD_USER',
+                type: 'ADD_NEW',
                 payload: {
                     name: nameInput,
                     age: ageInput,

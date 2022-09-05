@@ -83,7 +83,7 @@ export const Users = () => {
                                 </C.UserTheme>
 
                                 <C.UserTheme themeOptions={state.theme}>
-                                    <C.theme>E-mail</C.theme>
+                                    <C.theme>Email</C.theme>
                                 </C.UserTheme>
 
                                 <C.UserTheme themeOptions={state.theme}>
@@ -132,8 +132,8 @@ export const Users = () => {
                     <Input type="text" placeholder='Seu e-mail' value={emailInput} onChange={handleEmailInput} />
 
                     <C.EditUser>
-                        <Button content="Salvar" bgColorButton="#8fa514" icon={SaveImg} onClick={handleSaveUser} />
-                        <Button content="Cancelar" bgColorButton="#7a3137" icon={CancelImg} onClick={handleCancel} />
+                        <Button bgColorButton="#8fa514" icon={SaveImg} onClick={handleSaveUser} />
+                        <Button bgColorButton="#7a3137" icon={CancelImg} onClick={handleCancel} />
                     </C.EditUser>
 
                 </C.Edit>
