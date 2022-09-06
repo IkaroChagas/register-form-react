@@ -4,6 +4,12 @@
 # Projeto feito com CRA:
 <br>
 
+# Deploy: 
+<br>
+https://register-form-react.vercel.app/
+<br>
+<br>
+
 ## Instalação:
 <br>
 npm install
