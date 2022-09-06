@@ -1,6 +1,12 @@
 # DevSign formulário de cadastro
 <br>
 
+## Funcionalidades:
+<br>
+Adicionar usuário, editar e excluir.
+<br>
+<br>
+
 # Projeto feito com CRA:
 <br>
 
