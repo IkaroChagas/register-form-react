@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ThemeType } from "./reducers/theme";
+import LogoImg from './images/logo.png'
 
 type ThemeOptionsType = {
     themeOptions: ThemeType
@@ -9,6 +10,9 @@ export const Body = styled.div <ThemeOptionsType>`
     background-color: ${(props: { themeOptions: { bgColor: any; }; }) => props.themeOptions.bgColor};
     color: ${(props: { themeOptions: { color: any; }; }) => props.themeOptions.color};
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-size: cover;
 
     a {
         color: ${(props: { themeOptions: { color: any; }; }) => props.themeOptions.color};
@@ -19,7 +23,6 @@ export const Body = styled.div <ThemeOptionsType>`
         align-items: center;
         text-align: center;
         overflow-x: hidden;
-        overflow-y: hidden;
     }
 `;
 
@@ -30,25 +33,26 @@ export const Header = styled.header`
 
 export const Logo = styled.div`    
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 `;
 
-export const LogoText = styled.div`
+export const LogoText = styled.image`
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    font-size: 40px;
-    margin-top: 40px;
+    height: 182px;
+    width: 200px;
+    background-size: cover;
+    background-image: url(${LogoImg});
+    border-radius: 10px;
     font-family: sans-serif;
+    margin-top: 5px;
 `;
 
 export const Theme = styled.div`
     display: flex;
     align-items: center;
-    margin: 10px;
 `;
 
 export const ThemeContainer = styled.div`
@@ -57,10 +61,14 @@ export const ThemeContainer = styled.div`
     height: 15px;
     border-radius: 20px;
     display: flex;
-    margin: -90px;
+    margin: -100px;
     align-items: center;
     position: relative;
     cursor: pointer; 
+
+    @media(max-width: 414px) {
+        margin: -60px;
+    }
 `;
 
 export const ThemeCircle = styled.div<ThemeOptionsType>`
@@ -83,15 +91,19 @@ export const Menu = styled.div`
 `;
 
 export const Line = styled.div`
-    margin: 40px 0;
+    margin: 0;
+    padding: 10px;
 `;
 
 export const Footer = styled.footer`
     text-align: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-top: 10px;
+   
+   @media(max-width: 414px) {
+        margin: 15px;
+   }
 `;
 
 export const Link = styled.a`
-
 `;

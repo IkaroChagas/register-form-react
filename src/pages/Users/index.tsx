@@ -8,6 +8,7 @@ import CancelImg from '../../images/cancel.svg'
 import SaveImg from '../../images/save.svg'
 import EditImg from '../../images/edit.svg'
 import DeleteImg from '../../images/delete.svg'
+import Wave from '../../images/wave.svg'
 
 
 // Users que irá para as rotas

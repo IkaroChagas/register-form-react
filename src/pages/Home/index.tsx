@@ -5,6 +5,7 @@ import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
 import SendImg from '../../images/accept.svg'
 
+
 export const Home = () => {
     const { dispatch } = useContext(Context);
 
@@ -57,7 +58,7 @@ export const Home = () => {
                 <Input type="text" placeholder='Digite seu nome' value={nameInput === '' ? '' : nameInput} onChange={handleNameInput} />
                 <Input type="number" placeholder='Digite sua idade' value={ageInput === 0 ? '' : ageInput} onChange={handleAgeInput} />
                 <Input type="text" placeholder='Digite seu e-mail' value={emailInput === '' ? '' : emailInput} onChange={handleEmailInput} />
-                <Button content="Cadastrar" bgColorButton="#3282B8" icon={SendImg} onClick={handleAddNewUser} />
+                <Button bgColorButton="#2f7bc1" icon={SendImg} onClick={handleAddNewUser} />
 
             </C.Form>
         </C.Container>

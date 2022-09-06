@@ -38,7 +38,7 @@ export const TR = styled.tr`
     display: flex;
     margin: auto;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 `;
 
 export const BodyTheme = styled.tbody``;
@@ -46,12 +46,24 @@ export const BodyTheme = styled.tbody``;
 export const theme = styled.th`
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
+
+    @media(max-width: 414px) {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
 `;
 
 export const theme2 = styled.td`
      text-align: center;
-     padding: 5px 0;
+
+     @media(max-width: 414px) {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        margin: auto;
+    }
 `;
 
 export const ThemeIndex = styled.tr`
@@ -65,7 +77,14 @@ export const BodyButtons = styled.td`
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 10px 10px;
+    padding: 5px;
+
+    @media(max-width: 414px) {
+        display: flex;
+        flex-direction: column;
+        width: 70px;
+        margin: auto;
+    }
 `;
 
 export const Edit = styled.div<themeOptionsType>`

@@ -4,6 +4,9 @@ import { Context } from './contexts/context'
 import { useContext } from 'react';
 import { Button } from './components/Button'
 import { Link } from 'react-router-dom';
+import Wave from './images/wave.svg'
+
+
 
 
 function App() {
@@ -37,10 +40,11 @@ function App() {
 
   return (
 
-    <C.Body themeOptions={state.theme}>
+    <C.Body themeOptions={state.theme} className="GeneralBg"
+      style={{ backgroundImage: `url(${Wave})` }}>
       <C.Header>
         <C.Logo>
-          <C.LogoText>Dev Sign</C.LogoText>
+          <C.LogoText></C.LogoText>
           <C.Theme onClick={handleThemeOption}>
             <C.ThemeContainer>
               <C.ThemeCircle themeOptions={state.theme} />
@@ -49,8 +53,8 @@ function App() {
         </C.Logo>
 
         <C.Menu>
-          <Link to='/'><Button content='Área de Cadastro' bgColorButton="#00ADB5" /></Link>
-          <Link to='/users'><Button content='Lista de usuários' bgColorButton="#03494d" /></Link>
+          <Link to='/'><Button content='Área de Cadastro' bgColorButton="#2f7bc1" /></Link>
+          <Link to='/users'><Button content='Lista de usuários' bgColorButton="#2f7bc1" /></Link>
         </C.Menu>
       </C.Header>
 
