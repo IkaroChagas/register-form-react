@@ -19,10 +19,10 @@ export const Body = styled.div <ThemeOptionsType>`
     }
     
     @media(max-width: 414px) {
-        margin: auto;
         align-items: center;
         text-align: center;
         overflow-x: hidden;
+        max-width: 100vw;
     }
 `;
 
